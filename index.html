@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between; /* Space between the two sections */
+      gap: 20px; /* Gap between columns */
+      padding: 20px;
+      background-color: white;
+      max-width: 1200px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    /* Left Section Styles */
+    .left-section {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .left-section h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping for cards */
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Cards take 50% width with a gap */
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card p {
+      margin: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .link {
+      margin-top: 10px;
+      color: teal;
+      font-size: 14px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    /* Right Section Styles */
+    .right-section {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .right-section h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping for products */
+      gap: 20px;
+    }
+
+    .product-card {
+      flex: 1 1 calc(50% - 20px); /* Products take 50% width with a gap */
+      text-align: center;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .product-link {
+      color: teal;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .product-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <h2>Revamp your home in style</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/91Cg9dXESNL._AC_UF894,1000_QL80_.jpg" alt="Cushion covers">
+          <p>Cushion covers, bedsheets & more</p>
+        </div>
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/618N8F6nd+S._AC_UF894,1000_QL80_.jpg" alt="Figurines">
+          <p>Figurines, vases & more</p>
+        </div>
+        <div class="card">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/storage-ideas-69scottst-web023-1559145424.jpg" alt="Home storage">
+          <p>Home storage</p>
+        </div>
+        <div class="card">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/storage-ideas-69scottst-web023-1559145424.jpg" alt="Lighting">
+          <p>Lighting solutions</p>
+        </div>
+      </div>
+      <a href="#" class="link">Explore all</a>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <h2>Starting ₹149 | Headphones</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/be/9e/e1/be9ee1b796cd20e54c8a0fd5cdbd15db.png" alt="boAt">
+          <p>Starting ₹249 | boAt</p>
+        </div>
+        <div class="product-card">
+          <img src="https://c8.alamy.com/comp/2XXEHWJ/yellow-and-blue-lightning-bolt-logo-abstract-graphic-design-of-a-stylized-lightning-bolt-in-yellow-blue-and-black-use-this-logo-for-your-business-2XXEHWJ.jpg" alt="Boult">
+          <p>Starting ₹349 | boult</p>
+        </div>
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/be/9e/e1/be9ee1b796cd20e54c8a0fd5cdbd15db.png" alt="Noise">
+          <p>Starting ₹649 | Noise</p>
+        </div>
+        <div class="product-card">
+          <img src="https://static.digit.in/default/84c0680cda26471d041d29b64d33971d57b1c205.jpeg" alt="Zebronics">
+          <p>Starting ₹149 | Zebronics</p>
+        </div>
+      </div>
+      <a href="#" class="product-link">See all offers</a>
+    </div>
+  </div>
+</body>
+</html>
